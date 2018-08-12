@@ -6,12 +6,13 @@ Desktop version of my calculator app (https://jeffreyhui.com/grades) to download
 
 The web app is built with AngularJS and Chartjs and Electron was used to port it over to desktop. 
 
+## Usage
+
+Simply add your grades to calculate your current standing in your course and find out what you need to get an A! The calculator shows your final mark based on several grade scenarios for the percentage remaining and displays a chart of all the possible marks.
+
 ## Additional Screenshots
 
-![Screenshot 1 of Desktop App](img/desktop1.png)
-
 ![Screenshot 2 of Desktop App](img/desktop2.png)
-
 
 ## How to Use
 
