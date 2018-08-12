@@ -1,0 +1,65 @@
+<div class="container" ng-controller="addGrades">
+    <div class="alert alert-info alert-dismissible fade show " role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <strong>Hey There, Welcome!</strong> Enter your marks! Non-numerical input and empty fields will be discarded.
+</div>
+
+    <div class="row" style="margin-top: 3%; margin-bottom: 3%">
+    <div class="col-sm-12">
+      <button class="btn btn-success" ng-click="addField()">&nbsp
+        <span class="fa fa-plus"></span>&nbsp</button>
+      <button class="btn btn-danger" ng-click="delField()">&nbsp
+        <span class="fa fa-minus"></span>&nbsp</button>
+    </div>
+  </div>
+  <!--Template for EACH Grade -->
+  <div ng-repeat="x in names track by $index" class="row" style="margin-top: 2%">
+    <div class="col-sm-4">
+      <h2>Assessment {{$index+1}}</h2>
+    </div>
+    <div class="col-sm-4 input-group input-group-sm mb-1">
+      <input type="text" class="form-control" id="mark-{{$index}}" placeholder="Mark"></input>
+      <div class="input-group-append">
+        <span class="input-group-text">%</span>
+      </div>
+    </div>
+    <div class="col-sm-4 input-group input-group-sm mb-1">
+      <input type="text" class="form-control" id="wt-{{$index}}" placeholder="Weight"></input>
+      <div class="input-group-append">
+        <span class="input-group-text">/100</span>
+      </div>
+    </div>
+  </div>
+  <div></div>
+  <div class="row text-center" style="margin-top: 3%; margin-bottom: 3%">
+    <div class="col-sm-12 ">
+      <button class="btn btn-primary btn-block" id="btncalculate" href="#chart" ng-click="calculate()">
+        <span class="fa fa-calculator"></span> Calculate</button>
+    </div>
+  </div>
+  <!--Show Final Marks-->
+  <div style="margin-top: 2%">
+    <div ng-show="showMarks" class="row">
+      <div style="color: grey" class="col-lg-12">
+        <h5>{{onehundred}}</h5><h1 style="color:black">{{totalMarks}}%</h1>
+        <h5 ng-show="showGraph">What You Need For a 50 In The Course: </h5><h1 ng-show="showGraph" style="color:black">{{passingMark}}%</h1><p style="color:black" ng-show="showGraph"><i>...on the course weight remaining ({{lastMark}}/100 left)</i></p>
+        <hr>
+        <!-- <h5>Your Grade so far:</h5></br><h1  style="color:black">{{(totalMarks*100)/totalWeight}}%</h1> -->
+      </div>
+    </div>
+  <div ng-show="showGraph">    
+    <div class="row" style="margin-top:5%">
+      <div class="col-sm-12"><h3 class = "text-center">What will I get in the course If I get __% on the exam??"</h3></div>
+    </div>
+
+    <div class="row" style="margin-bottom: 5%">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10"><canvas id="myChart" width="300" height="200"></canvas></div>
+      <div class="col-sm-1"></div>
+    </div>
+  </div>
+
+  </div>
+</div>

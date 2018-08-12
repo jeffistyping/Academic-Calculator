@@ -1,0 +1,28 @@
+.alert{
+    animation-name: link-wobblein;
+    animation-duration: 1.7s;
+    animation-iteration-count: 1;
+}
+
+.errorShake{
+	animation-name: shake;
+	animation-duration: 0.75s;
+	animation-iteration-count: 1;
+}
+
+
+@keyframes link-wobblein {
+    0% {transform: translateX(300px);opacity:0}
+    50% {transform: translateX(-20px);opacity:1}
+    100% {transform: translateX(0px);} 
+}
+
+@keyframes shake {
+  10%, 90% {transform: translate3d(-10px, 0, 0);}
+  
+  20%, 80% {transform: translate3d(10px, 0, 0);}
+
+  30%, 50%, 70% {transform: translate3d(-10px, 0, 0);}
+
+  40%, 60% {transform: translate3d(10px, 0, 0);}
+}
