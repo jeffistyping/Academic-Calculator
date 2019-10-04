@@ -25,3 +25,6 @@ If you have npm and electron installed, you can simply clone the repo, then run 
 ## Disclaimer
 Building this was a learning tool for electron and Angular so it's probably still rough around the edges. If you find any bugs, please raise an issue. 
 
+
+## Reviews
+  - "This is the greatest app I ever used! I passed my courses because of it" - **Rahul Software Engineering at Facebook**
